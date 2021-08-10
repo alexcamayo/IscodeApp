@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/menu_foto"
+        android:icon="@drawable/ic_opciones"
+        android:iconTint="@color/white"
+        android:title="Opciones"
+        app:showAsAction="always">
+
+        <menu>
+            <item
+                android:id="@+id/subir_foto"
+                android:icon="@drawable/ic_subir_foto"
+                android:title="Actualizar foto"
+                >
+
+            </item>
+
+            <item
+                android:id="@+id/eliminar_foto"
+                android:icon="@drawable/ic_borrar_foto"
+                android:title="Eliminar foto"
+                >
+
+            </item>
+
+        </menu>
+
+    </item>
+
+
+</menu>

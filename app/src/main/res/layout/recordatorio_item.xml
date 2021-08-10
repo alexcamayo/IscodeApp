@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:backgroundTint="#FFFFFF"
+    android:id="@+id/layout_myrow"
+    android:elevation="0dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/recordatorio_item"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="5dp"
+        android:backgroundTint="#FFEDED"
+        android:backgroundTintMode="src_over"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="2dp">
+
+        <RelativeLayout
+            android:id="@+id/layout_item"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:elevation="4dp">
+
+            <TextView
+                android:id="@+id/tvw_titulo_myrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:text="Recordatorio"
+                android:textSize="24sp" />
+
+
+            <TextView
+                android:id="@+id/tvw_fecha_myrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/fecha"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="-3dp"
+                android:layout_toEndOf="@+id/fecha"
+                android:text="Fecha" />
+
+            <TextView
+                android:id="@+id/tvw_hora_myrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/hora"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="-3dp"
+                android:layout_toEndOf="@+id/hora"
+                android:text="Hora" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivw_importancia"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="20dp"
+                app:srcCompat="@drawable/importancia_icono" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/fecha"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_below="@+id/tvw_titulo_myrow"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="11dp"
+                app:srcCompat="@drawable/icono_fecha" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/hora"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_below="@+id/tvw_titulo_myrow"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="29dp"
+                app:srcCompat="@drawable/icono_hora" />
+
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

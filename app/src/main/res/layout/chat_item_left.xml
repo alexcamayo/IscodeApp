@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="2dp">
+
+    <RelativeLayout
+        android:id="@+id/fecha_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        tools:visibility="gone">
+
+        <TextView
+            android:id="@+id/fechaMensajes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/background_fecha"
+            android:paddingStart="5dp"
+            android:paddingTop="2dp"
+            android:paddingEnd="5dp"
+            android:paddingBottom="2dp"
+            android:text="20/12/1986"
+            android:textColor="#555555"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_image"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@mipmap/ic_launcher" />
+
+    <RelativeLayout
+        android:id="@+id/mensaje_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="70dp"
+        android:layout_toEndOf="@id/profile_image"
+        tools:visibility="gone">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="false"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/background_left">
+
+            <TextView
+                android:id="@+id/show_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="start"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:text="hello"
+                android:textColor="#353535"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toTopOf="@+id/horaM"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/horaM"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="3dp"
+                android:text="12:54"
+                android:textColor="#4A4A4A"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/recordatorio_layout"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="70dp"
+        android:layout_toEndOf="@id/profile_image"
+        android:padding="2dp"
+        tools:visibility="visible">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/stick_note"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:backgroundTint="#FFEDED"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="0dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/titulo_record"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginEnd="50dp"
+
+                    android:text="Recordatorio"
+                    android:textSize="24sp" />
+
+
+                <TextView
+                    android:id="@+id/t_fecha"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/fecha"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="-3dp"
+                    android:layout_toEndOf="@+id/fecha"
+                    android:text="Fecha" />
+
+                <TextView
+                    android:id="@+id/t_hora"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/hora"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="-3dp"
+                    android:layout_toEndOf="@+id/hora"
+                    android:text="Hora" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/importancia_record"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="false"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    app:srcCompat="@drawable/importancia_icono" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerHorizontal="true"
+                    app:srcCompat="@drawable/pin" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/fecha"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_below="@+id/titulo_record"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="11dp"
+                    app:srcCompat="@drawable/icono_fecha" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/hora"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_below="@+id/titulo_record"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="29dp"
+                    app:srcCompat="@drawable/icono_hora" />
+
+                <TextView
+                    android:id="@+id/horaR"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="12:54"
+                    android:textColor="#4A4A4A"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <RelativeLayout
+            android:id="@+id/botones_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="20dp"
+            tools:visibility="visible">
+
+            <ImageButton
+                android:id="@+id/aceptar_rec_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#00FF99"
+                android:src="@drawable/ic_check" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/registrofc_layout"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="70dp"
+        android:layout_toEndOf="@id/profile_image"
+        android:padding="2dp"
+        tools:visibility="gone">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:backgroundTint="#FFEDED"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="0dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/titulo_fcregistro"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="50dp"
+                    android:text="Recordatorio"
+                    android:textSize="24sp" />
+
+
+                <TextView
+                    android:id="@+id/t_fecharegistro"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/fecha_fc"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="-3dp"
+                    android:layout_toEndOf="@+id/fecha_fc"
+                    android:text="Fecha" />
+
+                <TextView
+                    android:id="@+id/fc_registro"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="1dp"
+                    android:layout_toStartOf="@+id/lpm_icono"
+                    android:fontFamily="sans-serif"
+                    android:gravity="center"
+                    android:text="000.00"
+                    android:textSize="20sp" />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/lpm_icono"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="10dp"
+                    app:lottie_autoPlay="true"
+                    app:lottie_fileName="beat.json"
+                    app:lottie_loop="true"
+                    app:lottie_repeatCount="2"
+                    app:lottie_repeatMode="restart" />
+
+                <TextView
+                    android:id="@+id/estado_fcregistro"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="38dp"
+                    android:text="Estado" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/fecha_fc"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_below="@+id/titulo_fcregistro"
+                    android:layout_centerHorizontal="false"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="35dp"
+                    app:srcCompat="@drawable/icono_fecha" />
+
+                <TextView
+                    android:id="@+id/horaF"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="12:54"
+                    android:textColor="#4A4A4A"
+                    android:textSize="12sp" />
+
+            </RelativeLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/prediccion_layout"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="70dp"
+        android:layout_toEndOf="@id/profile_image"
+        android:padding="2dp"
+        tools:visibility="gone">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="0dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/back_2">
+
+                <TextView
+                    android:id="@+id/titulo_prediccion"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="50dp"
+                    android:text="Predicción"
+                    android:textSize="24sp" />
+
+
+                <TextView
+                    android:id="@+id/fecha_prediccion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/fecha_pred"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="-3dp"
+                    android:layout_toEndOf="@+id/fecha_pred"
+                    android:text="Fecha" />
+
+                <TextView
+                    android:id="@+id/valor_prediccion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="1dp"
+                    android:layout_toStartOf="@+id/prediccion_icono"
+                    android:gravity="center"
+                    android:text="No hay riesgo"
+                    android:textSize="15sp" />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/prediccion_icono"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="10dp"
+                    app:lottie_autoPlay="true"
+                    app:lottie_fileName="pred.json"
+                    app:lottie_loop="true"
+                    app:lottie_repeatCount="2"
+                    app:lottie_repeatMode="restart" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/fecha_pred"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_below="@+id/titulo_prediccion"
+                    android:layout_centerHorizontal="false"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="25dp"
+                    app:srcCompat="@drawable/icono_fecha" />
+
+                <TextView
+                    android:id="@+id/horaP"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="12:54"
+                    android:textColor="#4A4A4A"
+                    android:textSize="12sp" />
+
+            </RelativeLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>

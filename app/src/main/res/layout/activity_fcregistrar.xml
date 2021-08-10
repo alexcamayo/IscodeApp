@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back_3"
+    tools:context=".FCRegistrarActivity">
+
+    <ImageView
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:layout_marginEnd="5dp"
+        app:layout_constraintEnd_toStartOf="@+id/informacion"
+        app:layout_constraintTop_toTopOf="@+id/informacion"
+        app:srcCompat="@drawable/ic_conectado"
+        app:tint="#26A69A" />
+
+    <TextView
+        android:id="@+id/informacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="Esperando conexión..."
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView2" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:cardElevation="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimaryDark">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="Registro FC"
+                android:textSize="25sp" />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cdvw_iniciarFC"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:transitionGroup="false"
+            app:cardCornerRadius="30dp"
+
+            tools:visibility="gone">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/back_3" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp">
+
+                    <ImageView
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="20dp"
+                        app:srcCompat="@drawable/icono_medir" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/nueva_medicion_btn"
+                        style="@style/Widget.Shrine.Button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="230dp"
+                        android:text="Nueva medición" />
+
+                </RelativeLayout>
+
+            </ScrollView>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <ScrollView
+            android:id="@+id/pantalla_registro"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="50dp"
+            tools:layout_editor_absoluteX="200dp"
+            tools:layout_editor_absoluteY="135dp"
+            tools:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp">
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textViewFR"
+                        android:layout_width="wrap_content"
+                        android:layout_height="120dp"
+                        android:layout_alignEnd="@+id/espaciobeat"
+                        android:fontFamily="sans-serif"
+                        android:gravity="center"
+                        android:text="000.00"
+                        android:textSize="70sp" />
+
+                    <Space
+                        android:id="@+id/espaciobeat"
+                        android:layout_width="10dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="250dp" />
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:id="@+id/beat_animation"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_alignStart="@+id/espaciobeat"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="50dp"
+                        app:lottie_autoPlay="false"
+                        app:lottie_fileName="beat.json"
+                        app:lottie_loop="false" />
+
+                    <TextView
+                        android:id="@+id/lpmtext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignStart="@+id/espaciobeat"
+                        android:layout_marginStart="25dp"
+                        android:layout_marginTop="25dp"
+                        android:text="LPM"
+                        android:textSize="20sp" />
+
+                </RelativeLayout>
+
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp" />
+
+                <TextView
+                    android:id="@+id/textViewInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:gravity="center"
+                    android:textSize="25sp" />
+
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp" />
+
+                <com.github.mikephil.charting.charts.LineChart
+                    android:id="@+id/grafica_fc"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp" />
+
+
+            </LinearLayout>
+        </ScrollView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cdw_mostrarFC"
+            android:layout_width="match_parent"
+            android:layout_height="450dp"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:transitionGroup="false"
+            android:visibility="gone"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="5dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:alpha="0.7"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/back_3" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="450dp">
+
+                    <TextView
+                        android:id="@+id/textViewFR_mostrar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="120dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="sans-serif"
+                        android:gravity="center"
+                        android:text="000.00"
+                        android:textSize="70sp" />
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="60dp"
+                        android:layout_alignEnd="@+id/textViewFR_mostrar"
+                        android:layout_marginTop="50dp"
+                        android:layout_marginEnd="-30dp"
+                        app:srcCompat="@drawable/icono_medir_lpm" />
+
+                    <EditText
+                        android:id="@+id/titulo_registro"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="150dp"
+                        android:layout_marginEnd="20dp"
+                        android:gravity="center"
+                        android:hint="Título"
+                        android:textColorHint="#000000" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/customerSpinnerLayout"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="220dp"
+                        android:layout_marginEnd="20dp"
+                        android:hint="Estado de la medición"
+                        app:boxStrokeColor="#8A5B5B">
+
+                        <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                            android:id="@+id/customerTextView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:focusable="false"
+                            android:textSize="16sp"
+                            tools:ignore="KeyboardInaccessibleWidget" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <ImageButton
+                        android:id="@+id/guardar_btn"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="60dp"
+                        android:layout_marginTop="320dp"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:scaleType="fitXY"
+                        android:scaleX="0.8"
+                        android:scaleY="0.8"
+                        android:src="@drawable/guardar_icon" />
+
+                    <ImageButton
+                        android:id="@+id/enviar_btn"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="320dp"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:scaleType="fitXY"
+                        android:scaleX="1.1"
+                        android:scaleY="1.1"
+                        android:src="@drawable/enviar_icono"
+                        app:tint="#3E3E3E" />
+
+                    <ImageButton
+                        android:id="@+id/nueva_medicion_2_btn"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="320dp"
+                        android:layout_marginEnd="60dp"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/icono_agregar"
+                        app:tint="#404040" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/go_historicos_btn"
+                        style="@style/Widget.Shrine.Button.TextButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="380dp"
+                        android:text="Ir a históricos" />
+
+
+                </RelativeLayout>
+
+            </ScrollView>
+
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/alimentacion"
+        android:icon="@drawable/ic_subir_foto"
+        android:title="Alimentación" />
+    <item android:id="@+id/ejercicio"
+        android:icon="@drawable/ic_ejercicio"
+        android:title="Ejercicio" />
+    <item android:id="@+id/entretenimiento"
+        android:icon="@drawable/ic_entretenimiento"
+        android:title="Entretenimiento" />
+    <item android:id="@+id/lectura"
+        android:icon="@drawable/ic_lectura"
+        android:title="Lectura" />
+</menu>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="red">#FD0000</color>
+
+    <color name="Color1">#00B0F0</color>
+    <color name="Color2">#FFE285</color>
+    <color name="Color3">#85FFAB</color>
+    <color name="Color4">#FF3737</color>
+    <color name="Color5">#FF888888</color>
+    <color name="Nota1">#FFFFCF37</color>
+    <color name="Nota2">#8CEF64</color>
+    <color name="Nota3">#F4B3B2</color>
+    <color name="Nota4">#FF03DAC5</color>
+    <color name="Colorx">#FFB2EBF2</color>
+    <color name="escritura">#343839</color>
+
+    <color name="RecomColor1">#3CC6F8</color>
+    <color name="RecomColor2">#FFE89F</color>
+    <color name="RecomColor3">#B1EDC4</color>
+    <color name="RecomColor4">#F18282</color>
+
+
+    <color name="colorPrimary">#FF03DAC5</color>
+    <color name="colorPrimaryDark">#FBB8AC</color>
+    <color name="colorSecondary">#FBB8AC</color>
+    <color name="colorTercero">#26C6DA</color>
+    <color name="TolbarColor">#FDC1B6</color>
+    <color name="colorAccent">#2A2C2C</color>
+    <color name="textColorPrimary">#442C2E</color>
+    <color name="toolbarIconColor">#FFFFFF</color>
+    <color name="loginPageBackgroundColor">#FFFFFF</color>
+    <color name="productGridBackgroundColor">#FFFFFF</color>
+    <color name="textInputOutlineColor">#FBB8AC</color>
+
+
+</resources>

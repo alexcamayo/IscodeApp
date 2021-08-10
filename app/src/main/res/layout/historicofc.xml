@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:backgroundTint="#FFFFFF"
+    android:id="@+id/layout_historicofc"
+    android:elevation="0dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/historicofc_item"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="5dp"
+        android:backgroundTint="#FFEDED"
+        android:backgroundTintMode="src_over"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="2dp">
+
+        <RelativeLayout
+            android:id="@+id/layout_item"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:elevation="4dp">
+
+            <TextView
+                android:id="@+id/titulofc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:text="Historico FC"
+                android:textSize="24sp" />
+
+
+            <TextView
+                android:id="@+id/fechafc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/fecha"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="-3dp"
+                android:layout_toEndOf="@+id/fecha"
+                android:text="Fecha" />
+
+            <TextView
+                android:id="@+id/horafc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/hora"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="-3dp"
+                android:layout_toEndOf="@+id/hora"
+                android:text="Hora" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/fecha"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+
+                android:layout_marginStart="20dp"
+                android:layout_above="@id/hora"
+                android:layout_marginBottom="5dp"
+                app:srcCompat="@drawable/icono_fecha" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/hora"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="10dp"
+
+                android:layout_marginStart="20dp"
+
+                app:srcCompat="@drawable/icono_hora" />
+
+            <TextView
+                android:id="@+id/valorfc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="1dp"
+                android:layout_toStartOf="@+id/lpm_icono"
+                android:fontFamily="sans-serif"
+                android:gravity="center"
+                android:text="000.00"
+                android:textSize="25sp" />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/lpm_icono"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="10dp"
+                app:lottie_autoPlay="true"
+                app:lottie_fileName="beat.json"/>
+
+            <TextView
+                android:id="@+id/estadofc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="25dp"
+                android:layout_marginBottom="10dp"
+                android:text="Estado" />
+
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

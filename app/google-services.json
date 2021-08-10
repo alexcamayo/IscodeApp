@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "251145930868",
+    "firebase_url": "https://app-iscode-default-rtdb.firebaseio.com",
+    "project_id": "app-iscode",
+    "storage_bucket": "app-iscode.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:251145930868:android:a133ec1291ccd1789e2921",
+        "android_client_info": {
+          "package_name": "com.proyecto.iscodeapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "251145930868-vfuahpi5sjeo43a37503i1nc07sggvev.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAYmerhlkOqJVpX2DL2YeLILoVZOEkpB5g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "251145930868-vfuahpi5sjeo43a37503i1nc07sggvev.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
